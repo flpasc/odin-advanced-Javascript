@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form Validation with JS</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="./index.js" defer></script>
+	</head>
+	<body>
+		<div>
+			<form>
+				<label for="choose">Banana or Cherry?</label>
+				<input type="text" id="choose" name="i-like" required />
+				<button>Submit</button>
+			</form>
+			<form>
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email" />
+				<button>Submit</button>
+			</form>
+		</div>
+		<div class="login-form">
+			<form novalidate>
+				<ul>
+					<li>
+						<label for="username">Name</label>
+						<input type="text" name="username" id="user-name" required />
+					</li>
+					<li>
+						<label for="email">Email</label>
+						<input type="email" name="email" id="user-email" required />
+					</li>
+					<li>
+						<label for="zip-code">Zip-Code</label>
+						<input type="text" pattern="[0-9]{5}" required />
+					</li>
+					<li>
+						<label for="passwort">Passwort</label>
+						<input
+							type="password"
+							name="password"
+							id="user-password"
+							required
+							minlength="8"
+							maxlength="12" />
+					</li>
+					<li>
+						<button>Submit</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</body>
+</html>
